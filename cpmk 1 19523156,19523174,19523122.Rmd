@@ -1,0 +1,128 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+# no 1
+```{r}
+# a
+A <- matrix(c(1,2,3,4,5,6,7,8,8),3,3,TRUE)
+colnames(A) <-c("col1", "col2", "col3")
+rownames(A) <-c("row1", "row2", "row3")
+A
+```
+```{r}
+#b
+A[1, 2]
+A[1,  ]
+A[ , 1]
+A[1:2, ]
+A[ , 1:2]
+diag(A)
+
+```
+```{r}
+#c
+c <- det(A)
+c
+```
+
+```{r}
+#d
+d <- solve(A)
+d
+```
+```{r}
+#e
+e <- t(A)
+E <- e*A
+E
+```
+```{r}
+#f
+eigen(A)
+
+```
+
+#no 2
+```{r}
+
+```
+
+#no 3
+```{r}
+M <- matrix(c(1,2,3,8,2,9),3,2,TRUE)
+N <- matrix(c(5,4,8,2),2,2,TRUE)
+M
+N
+```
+```{r}
+(a)
+
+S <- M%*%N
+S
+```
+
+```{r}
+(b)
+
+z<- solve(N)
+Z <- M%*%z
+Z
+```
+```{r}
+(c)
+
+x<- t(N)
+X<- M%*%x
+X
+```
+```{r}
+(d)
+
+Y<- 3*(Z+X)
+Y
+```
+#no 4
+
+```{r}
+G <- matrix(c(1,-2,3,2,1,1,-3,2,-1),3,3,TRUE)
+g <- c(7,4,-10)
+#a
+showEqn(G,g)
+#b
+Solve(G,g)
+#c
+plotEqn3d(G,g)
+#d
+echelon(G,g, verbose=TRUE, fractions=TRUE)
+
+```
+
+
+#no 5
+
+```{r}
+K<- matrix(c(1,2,3,4,5,6,7,8,9),3,3, TRUE)
+K
+
+```
+```{r}
+which((K[1, ] < 4))
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
