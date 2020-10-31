@@ -1,0 +1,32 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+```{r}
+#function
+
+#A
+f1 <- function (x){
+  fx<- x^3 + x^2-6
+  return (fx)
+}
+input <- seq(-20 : 20)
+plot (input,
+      sapply(input,f1),
+      type = "l", xlab = "x",
+      ylab ="f(x)")
+```
+
+```{r}
+f2 <- function (x){
+  fx<- -x^2 - 6
+  return (fx)
+}
+input <- seq(-15 : 25)
+plot (input,
+      sapply(input,f2),
+      type = "l", xlab = "x",
+      ylab ="f(x)")
+```
+
